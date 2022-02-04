@@ -1,0 +1,30 @@
+<app-header></app-header>
+<form>
+    <div class='raspolozivo'>
+        <h2>Raspoloziva auta</h2>
+    </div>
+
+    <div class='opcije'>
+        <input *ngIf="user.ime" class='dodaj' style="width:67%" [routerLink]="['/dodaj']" type='submit' value='Dodaj'>
+    </div>
+    <div style="text-align: center; margin-top: -2%; margin-bottom: 1%;">
+        <input [(ngModel)]="carPrice" name="title" style="width:23%" class="pretrazi" placeholder="Enter price: *" />
+    </div>
+    <div class='product' *ngFor="let car of cars | filterByUP:carPrice;">
+        <ul>
+            <li>
+                <div class='product2'>
+                    <h3> {{car.model}} </h3>
+                    <p class='postavio'>Cijena: {{car.cijena}} </p>
+                    <input class='pogledaj' [routerLink]="['/car', car.id]" type='submit' value='Pogledaj'>
+                    <input *ngIf="user.ime" (click)="kupi(car, user)" class='kupi' type='submit' value='Kupi'>
+                    <input *ngIf="user.admin === 1" class='obrisi' (click)='obrisi(car.id)' type='submit'
+                        value='Obrisi'>
+                    <input *ngIf="user.admin === 1" class='izmijeni' [routerLink]="['/izmijeni', car.id]" type='submit'
+                        value='Izmijeni'>
+                </div>
+            </li>
+        </ul>
+    </div>
+</form>
+<app-footer></app-footer>

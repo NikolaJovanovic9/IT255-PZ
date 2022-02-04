@@ -1,0 +1,99 @@
+{
+  "car": [
+    {
+      "id": 1,
+      "marka": "BMW",
+      "model": "X4",
+      "cijena": 25999,
+      "godiste": 2017,
+      "karoserija": "Dzip/SUV",
+      "gorivo": "Dizel",
+      "lokacija": "Oslo",
+      "vlasnistvo": 0
+    },
+    {
+      "id": 2,
+      "marka": "BMW",
+      "model": "320",
+      "cijena": 35000,
+      "godiste": 2017,
+      "karoserija": "Limuzina",
+      "gorivo": "Dizel",
+      "lokacija": "Beograd",
+      "vlasnistvo": 0
+    },
+    {
+      "id": 3,
+      "marka": "Audi",
+      "model": "Q8",
+      "cijena": 79900,
+      "godiste": 2019,
+      "karoserija": "Dzip/Suv",
+      "gorivo": "Dizel",
+      "lokacija": "Podgorica",
+      "vlasnistvo": 0
+    },
+    {
+      "id": 4,
+      "marka": "Audi",
+      "model": "A4",
+      "cijena": 15950,
+      "godiste": 2016,
+      "karoserija": "Limuzina",
+      "gorivo": "Dizel",
+      "lokacija": "Pogorica",
+      "vlasnistvo": 0
+    },
+    {
+      "id": 5,
+      "marka": "Mercedes Benz",
+      "model": "GLC 250",
+      "cijena": 38000,
+      "godiste": 2016,
+      "karoserija": "Dzip/Suv",
+      "gorivo": "Dizel",
+      "lokacija": "Madrid",
+      "vlasnistvo": 0
+    },
+    {
+      "id": 6,
+      "marka": "Mercedes Benz",
+      "model": "GLE 370",
+      "cijena": 79000,
+      "godiste": 2019,
+      "karoserija": "Dzip/Suv",
+      "gorivo": "Dizel",
+      "lokacija": "Pariz",
+      "vlasnistvo": 0
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "username": "milanS",
+      "password": "milan1999",
+      "ime": "Milan",
+      "prezime": "Stefanovic",
+      "email": "milanS1999@gmail.com",
+      "admin": 1
+    },
+    {
+      "id": 2,
+      "username": "milicaK",
+      "password": "milica1999",
+      "ime": "Milica",
+      "prezime": "Kovacevic",
+      "email": "milica1999@gmail.com",
+      "admin": 0
+    },
+    {
+      "id": 3,
+      "username": "milenaD",
+      "password": "milena2000",
+      "ime": "Milena",
+      "prezime": "Draskovic",
+      "email": "milena2000",
+      "admin": 0
+    }
+  ]
+}

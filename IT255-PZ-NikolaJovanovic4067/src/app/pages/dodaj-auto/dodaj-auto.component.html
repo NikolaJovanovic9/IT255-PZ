@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="box">
+	<form #myForm="ngForm">
+		<h1>Dodajte auto</h1>
+		<div class="textbox">
+			<i class="fa fa-info" aria-hidden="true"></i>
+			<input type="text" name="marka" #marka placeholder="Marka*" required [(ngModel)]="car.marka" />
+		</div>
+		<div class="textbox">
+			<i class="fa fa-car" aria-hidden="true"></i>
+			<input type="text" name="model" placeholder="Model*" required [(ngModel)]="car.model" />
+		</div>
+		<div class="textbox">
+			<i class="fa fa-credit-card" aria-hidden="true"></i>
+			<input type="number" name="cijena" placeholder="Cijena*" required [(ngModel)]='car.cijena' />
+		</div>
+		<div class="textbox">
+			<i class="fa fa-calendar" aria-hidden="true"></i>
+			<input type="number" name="godiste" placeholder="Godiste*" min="1900" max="2025" required
+				[(ngModel)]='car.godiste' />
+		</div>
+		<div class="textbox">
+			<i class="fa fa-info" aria-hidden="true"></i>
+			<input type="text" name="karoserija" placeholder="Karoserija*" required [(ngModel)]='car.karoserija'>
+		</div>
+		<div class="textbox">
+			<i class="fa fa-info" aria-hidden="true"></i>
+			<input type="text" name="gorivo" placeholder="Tip goriva*" required [(ngModel)]='car.gorivo'>
+		</div>
+		<div class="textbox">
+			<i class="fa fa-map-marker" aria-hidden="true"></i>
+			<input type="text" name="lokacija" placeholder="Lokacija*" required [(ngModel)]='car.lokacija'>
+		</div>
+		<input class="btn" (click)="addCar(car)" type="submit" value="Prijavi">
+
+	</form>
+</div>
+<app-footer></app-footer>

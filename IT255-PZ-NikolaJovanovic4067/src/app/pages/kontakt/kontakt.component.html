@@ -1,0 +1,42 @@
+<app-header></app-header>
+<div class='contact-box'>
+    <form action='includes/posaljiporuku.php' method='POST'>
+        <h1>Ostavite komentar</h1>
+        <div class='contact-textbox'>
+            <input type='text' name='tema' placeholder='Tema' required />
+        </div>
+        <div class='contact-textbox'>
+            <textarea type='textarea' rows='4' cols='50' name='poruka' placeholder='Ukucajte Vasu poruku'
+                required></textarea>
+        </div>
+        <input class='contact-btn' type='submit' value='Posalji' />
+    </form>
+</div>
+<div class="container">
+    <div class="box2">
+        <div class="icon">
+            <i class="fa fa-map-marker"></i>
+            <h4>Adress</h4>
+            <h3>Oslo, 0275, Norway</h3>
+        </div>
+    </div>
+    <div class="box2">
+        <div class="icon">
+            <i class="fa fa-phone"></i>
+            <h4>Mobile</h4>
+            <h3>+47 74 43 234</h3>
+        </div>
+    </div>
+    <div class="box2">
+        <div class="icon"><i class="fa fa-envelope"></i>
+            <h4>Email</h4>
+            <h3>lenteshop@gmail.com</h3>
+        </div>
+    </div>
+</div>
+<p id="mapa"><iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7997.259888764573!2d10.666371844771888!3d59.9269155625112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416db04ad2c47d%3A0x84cbf5806cee4bd3!2sHoffsveien%2020%2C%200275%20Oslo!5e0!3m2!1ssr!2sno!4v1596537319899!5m2!1ssr!2sno"
+        width="900" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+        tabindex="0"></iframe>
+</p>
+<app-footer></app-footer>

@@ -1,0 +1,53 @@
+<head>
+    <meta charse="utf-8">
+    <title>Lente</title>
+
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+
+    <nav class="navBar">
+        <ul class="prt1">
+            <li class="nav-item">
+                <a *ngIf="!user.ime" class='logo' [routerLink]="['/login']" routerLinkActive="active">Login</a>
+
+                <a *ngIf="user.admin == 0" class='logo' (click)="logOut()" [routerLink]="['']"
+                    routerLinkActive="active">Odjavi se,
+                    {{user.ime}}</a>
+                <a *ngIf="user.admin == 1" class='logo' (click)="logOut()" [routerLink]="['']"
+                    routerLinkActive="active">Odjavi se,
+                    {{user.ime}} [ADMIN]</a>
+            </li>
+        </ul>
+        <ul class="prt2">
+            <li><a class="active" [routerLink]="['/pocetna']">Početna</a></li>
+            <li><a [routerLink]="['/car']">Automobili</a></li>
+            <li><a [routerLink]="['/kontakt']">Kontakt</a></li>
+            <li><a *ngIf="user.ime" routerLinkActive="active" [routerLink]="['/dodaj']">Dodaj Auto</a></li>
+            <li><a *ngIf="user.ime" routerLinkActive="active" [routerLink]="['/korpa']">Korpa</a></li>
+            <li><a *ngIf="user.admin === 1" [routerLink]="['/korisnici']">Korisnici</a></li>
+            <li><a *ngIf="!user.ime" [routerLink]="['/registruj']" routerLinkActive="active">Registruj se</a></li>
+        </ul>
+    </nav>
+
+    <!---Slide Box--->
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fa fa-bars" id="btn"></i>
+        <i class="fa fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>Lente App</header>
+        <ul>
+            <li><a [routerLink]="['/pocetna']"><i class="fa fa-home"></i>Početna</a></li>
+            <li><a [routerLink]="['/car']"><i class="fa fa-car"></i>Automobili</a></li>
+            <li><a [routerLink]="['/kontakt']"><i class="fa fa-envelope"></i>Kontakt</a></li>
+
+            <li><a *ngIf="user.ime" [routerLink]="['/dodaj']"><i class='fa fa-plus'> Dodaj Auto</i></a></li>
+            <li><a *ngIf="user.ime" [routerLink]="['/korpa']"><i class='fa fa-shopping-cart'> Korpa</i></a></li>
+            <li><a *ngIf="user.admin === 1" [routerLink]="['/korisnici']"><i class='fa fa-users'> Korisnici</i></a></li>
+            <li><a [routerLink]="['/registruj']"><i class='fa fa-user-plus'> Registruj se</i></a></li>
+        </ul>
+    </div>

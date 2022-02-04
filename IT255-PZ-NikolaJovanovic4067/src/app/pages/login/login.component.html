@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="box">
+	<form [formGroup]="loginForm" (ngSubmit)="logIn()">
+		<h1>Ulogujte se</h1>
+		<div class="textbox">
+			<i class="fa fa-user" aria-hidden="true"></i>
+			<input type="text" id="username" formControlName="username" name="username" placeholder="Username"
+				required />
+		</div>
+		<div class="textbox">
+			<i class="fa fa-lock" aria-hidden="true"></i>
+			<input type="password" id="password" formControlName="password" name="password" placeholder="Password"
+				required />
+		</div>
+		<input class="btn" type="submit" value="Log in" />
+		<br>
+		<br>
+		<a [routerLink]="['/registruj']">Nemate nalog? Registrujte se</a>
+	</form>
+</div>
+
+<app-footer></app-footer>

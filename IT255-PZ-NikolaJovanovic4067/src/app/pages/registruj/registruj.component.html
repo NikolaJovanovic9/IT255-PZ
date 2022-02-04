@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="box">
+	<form #mForm="ngForm">
+		<h1>Registruj se</h1>
+		<div class="textbox">
+			<i class="fa fa-info" aria-hidden="true"></i>
+			<input type="text" name="ime" #ime placeholder="Ime*" required [(ngModel)]="user.ime" />
+		</div>
+		<div class="textbox">
+			<i class="fa fa-info" aria-hidden="true"></i>
+			<input type="text" name="prezime" placeholder="Prezime*" required [(ngModel)]="user.prezime" />
+		</div>
+		<div class="textbox">
+			<i class="fa fa-user" aria-hidden="true"></i>
+			<input type="text" name="username" placeholder="Username*" required [(ngModel)]='user.username' />
+		</div>
+		<div class="textbox">
+			<i class="fa fa-lock" aria-hidden="true"></i>
+			<input type="password" name="password" placeholder="Password*" required [(ngModel)]='user.password' />
+		</div>
+		<div class="textbox">
+			<i class="fa fa-envelope" aria-hidden="true"></i>
+			<input type="email" name="email" placeholder="Email*" required [(ngModel)]='user.email'>
+		</div>
+		<input class="btn" (click)="addUser(user)" type="submit" value="Sign up">
+
+		<a [routerLink]="['/login']">Posedujete nalog? Idite na login</a>
+	</form>
+</div>
+<app-footer></app-footer>

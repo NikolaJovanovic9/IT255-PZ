@@ -1,0 +1,19 @@
+<app-header></app-header>
+<form>
+    <div class='podaciK'>
+        <h2>Podaci o korisnicima</h2>
+    </div>
+    <div class='product' *ngFor="let user of users">
+        <ul>
+            <li>
+                <div class='product2'>
+                    <h3>Ime i prezime: {{user.ime}} {{user.prezime}} </h3>
+                    <p class='postavio'> Email: {{user.email}} </p><br>
+                    <p class='postavio'> Username: {{user.username}} </p><br>
+                    <p class='postavio'> Admin: {{user.admin}}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</form>
+<app-footer></app-footer>

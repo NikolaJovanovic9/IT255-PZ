@@ -1,0 +1,18 @@
+<app-header></app-header>
+<form>
+    <div class='raspolozivo'>
+        <h2 style="margin-left:-10%">Auta ce stici na vasu adresu kroz par dana</h2>
+    </div>
+    <div class='product' *ngFor="let car of cars_vlasnistvo">
+        <ul>
+            <li>
+                <div class='product2'>
+                    <h3> {{car.model}} </h3>
+                    <p class='postavio'>Cijena: {{car.cijena}} </p>
+                    <input class='pogledaj' [routerLink]="['/car', car.id]" type='submit' value='Pogledaj'>
+                </div>
+            </li>
+        </ul>
+    </div>
+</form>
+<app-footer></app-footer>
